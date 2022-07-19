@@ -1,0 +1,402 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home
+{% endblock %}
+
+{% block body %}
+	{% block stylesheets %}
+		{{ encore_entry_link_tags('home') }}
+	{% endblock %}
+
+	{% block button_back_to_top %}
+		<script>
+			configObj = {
+"buttonD": "M8 17.333h5.333v4C13.333 22.806 14.527 24 16 24c1.473 0 2.667-1.194 2.667-2.667v-4H24L16 8l-8 9.333z",
+"buttonT": "translate(-1088 -172) translate(832 140) translate(32 32) translate(224)",
+"shadowSize": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+"roundnessSize": "12px",
+"buttonDToBottom": "32px",
+"buttonDToRight": "32px",
+"selectedBackgroundColor": "#0a95ff",
+"selectedIconColor": "#ffffff",
+"buttonWidth": "40px",
+"buttonHeight": "40px",
+"svgWidth": "32px",
+"svgHeight": "32px"
+};
+function createButton(obj, pageSimulator) {
+const body = document.querySelector("body");
+backToTopButton = document.createElement("span");
+backToTopButton.classList.add("softr-back-to-top-button");
+backToTopButton.id = "softr-back-to-top-button";
+pageSimulator ? pageSimulator.appendChild(backToTopButton) : body.appendChild(backToTopButton);
+backToTopButton.style.width = obj.buttonWidth;
+backToTopButton.style.height = obj.buttonHeight;
+backToTopButton.style.marginRight = obj.buttonDToRight;
+backToTopButton.style.marginBottom = obj.buttonDToBottom;
+backToTopButton.style.borderRadius = obj.roundnessSize;
+backToTopButton.style.boxShadow = obj.shadowSize;
+backToTopButton.style.color = obj.selectedBackgroundColor;
+backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;
+pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";
+backToTopButton.style.outline = "none";
+backToTopButton.style.bottom = "0px";
+backToTopButton.style.right = "0px";
+backToTopButton.style.cursor = "pointer";
+backToTopButton.style.textAlign = "center";
+backToTopButton.style.border = "solid 2px currentColor";
+backToTopButton.innerHTML = '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';
+backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");
+backToTopButtonSvg.style.verticalAlign = "middle";
+backToTopButtonSvg.style.margin = "auto";
+backToTopButtonSvg.style.justifyContent = "center";
+backToTopButtonSvg.style.width = obj.svgWidth;
+backToTopButtonSvg.style.height = obj.svgHeight;
+backToTopButton.appendChild(backToTopButtonSvg);
+backToTopButtonImg = document.querySelector(".back-to-top-button-img");
+backToTopButtonImg.style.fill = obj.selectedIconColor;
+backToTopButtonSvg.appendChild(backToTopButtonImg);
+backToTopButtonImg.setAttribute("d", obj.buttonD);
+backToTopButtonImg.setAttribute("transform", obj.buttonT);
+if (! pageSimulator) {
+backToTopButton.style.display = "none";
+window.onscroll = function () {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+backToTopButton.style.display = "block";
+} else {
+backToTopButton.style.display = "none";
+}
+};
+backToTopButton.onclick = function () {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+};
+}
+};
+document.addEventListener("DOMContentLoaded", function () {
+createButton(configObj, null);
+});
+		</script>
+	{% endblock %}
+
+	{% block content %}
+		<section class="container">
+			<section class="container-fluid mt-4">
+				<h1>Hi, I'm Jonathan Matulla.
+					<strong class="text-primary">Web Developer / Designer</strong>
+					based in Strasbourg, France
+				</h1>
+				<br/>
+				<button class="btn btn-dark p-3 rounded-5">My Resume &nbsp;
+					<i class="bi bi-arrow-up-right"></i>
+				</button>
+			</section>
+			<br/>
+			<section class="container-fluid">
+				<div class="d-flex justify-content-between align-items-center p-5">
+					<div class="">
+						<h3 class="">Web Developer</h3>
+						<p class="">
+							O'Shopi
+						</p>
+					</div>
+					<div class="">
+						<i class="bi bi-arrow-right"></i>
+					</div>
+				</div>
+				<figure class="text-center">
+					<img src="assets/img/oshopi.jpg" class="" alt="O'Shopi" width="100%" heigh="auto">
+				</figure>
+				<div>
+					<h6>
+						<span class="badge bg-secondary">UI / UX</span>
+						<span class="badge bg-secondary">Figma</span>
+						<span class="badge bg-secondary">Symfony</span>
+						<span class="badge bg-secondary">JavaScript</span>
+					</h6>
+				</div>
+			</section>
+			<br/>
+			<section class="container-fluid">
+				<div class="d-flex justify-content-between align-items-center p-5">
+					<div class="">
+						<h3 class="">Ui Design Study</h3>
+						<p class="">
+							Leboncoin
+						</p>
+					</div>
+					<div class="">
+						<i class="bi bi-arrow-right"></i>
+					</div>
+				</div>
+				<figure class="text-center">
+					<img src="assets/img/leboncoin.png" class="" alt="O'Shopi" width="100%" heigh="auto">
+				</figure>
+				<div>
+					<h6>
+						<span class="badge bg-secondary">UI / UX</span>
+						<span class="badge bg-secondary">Figma</span>
+					</h6>
+				</div>
+			</section>
+			<br/>
+			<section class="container-fluid">
+				<div class="d-flex justify-content-between align-items-center p-5">
+					<div class="">
+						<h3 class="">UX Case Study</h3>
+						<p class="">
+							App Artiste
+						</p>
+					</div>
+					<div class="">
+						<i class="bi bi-arrow-right"></i>
+					</div>
+				</div>
+				<figure class="text-center">
+					<img src="assets/img/app_artiste.png" class="" alt="O'Shopi" width="100%" heigh="auto">
+				</figure>
+				<div>
+					<h6>
+						<span class="badge bg-secondary">UI / UX</span>
+						<span class="badge bg-secondary">Figma</span>
+					</h6>
+				</div>
+			</section>
+		</section>
+	{% endblock %}
+	<br/>
+	{% block about_us %}
+		<section class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<section class="container-fluid p-3">
+						<h3>Hi, I'm Jonathan Matulla.
+							<strong class="text-primary">Web Developer / Designer</strong>
+							based in Strasbourg, France
+						</h3>
+					</section>
+
+					<section class="container-fluid p-3">
+						<h3>Hi, I'm Jonathan Matulla.
+							<strong class="text-primary">Web Developer / Designer</strong>
+							based in Strasbourg, France
+						</h3>
+					</section>
+
+					<section class="container-fluid p-3">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit varius massa cursus laoreet suspendisse ac nisl in pulvinar. Auctor integer pellentesque nunc ut at penatibus et.
+						</p>
+					</section>
+					<section class="container-fluid p-3">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit varius massa cursus laoreet suspendisse ac nisl in pulvinar. Auctor integer pellentesque nunc ut at penatibus viverra risus nisl. Sapien nibh interdum tellus sapien et tortor, commodo. Dolor urna pharetra, nulla et morbi sed ornare. Sed condimentum urna pharetra id in enim nunc. Mi ut etiam vel.
+						</p>
+					</section>
+
+
+				</div>
+				<div class="col-md-6 fixed-posi bg-light">
+					<div class="h-100 d-flex align-items-center justify-content-center">
+						<section>
+							<figure class="text-center p-4">
+								<img src="assets/img/resume.png" class="img-fluid" alt="Photo de moi même">
+							</figure>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+	{% endblock %}
+	<br/>
+	{% block resume %}
+		<section class="container">
+			<section class="container-fluid d-sm-flex justify-content-between align-items-center">
+				<h2 class="fs-1">Resume</h2>
+				<br/>
+				<button class="btn btn-dark p-3 rounded-5">&nbsp; PDF &nbsp;
+					<i class="bi bi-arrow-up-right"></i>
+					&nbsp;
+				</button>
+			</section>
+			<br/>
+			<br/>
+			<section>
+				<section class="container-fluid">
+					<h3>
+						<strong>Experience</strong>
+					</h3>
+					<hr>
+				</div>
+				<br/>
+				<div class="d-sm-flex justify-content-between align-items-center">
+					<div>
+						<p>
+							<strong>O'Shopi</strong>
+							<br>
+							Web Developer
+						</p>
+					</div>
+					<div>
+						<p>
+							Juillet 2022 - Present
+						</p>
+					</div>
+				</div>
+				<br/>
+				<div>
+					<p>
+						Digitalize nous à contacter afin de réaliser, une application web qui a pour objectif de scanner des code-barres ( Reconnaissance du produit ainsi qu’une géolocalisation lors du scan).
+					</p>
+				</section>
+			</section>
+			<br/>
+			<section>
+				<section class="container-fluid">
+					<h3>
+						<strong>Education</strong>
+					</h3>
+					<hr>
+				</div>
+				<br/>
+				<div class="d-sm-flex justify-content-between align-items-center">
+					<div>
+						<p>
+							<strong>MJM GRAPHIC DESIGN</strong>
+							<br>
+							Strasbourg
+						</p>
+					</div>
+					<div>
+						<p>
+							Septembre 2019 - Juillet 2021
+						</p>
+					</div>
+				</div>
+				<br/>
+				<div>
+					<p>
+						Titulaire d’un dîplome de webdesigner, niveau Bac +2.
+						<br>
+						<br>
+						Web Integrateur, UI/UX Design & Research, Motion Desgin, HTML, CSS, JS, Web Design, Mobile First.
+						<br>
+						<br>
+						Framework : Bootstrap & JQuery
+						<br>
+						<br>
+					</p>
+				</section>
+			</section>
+			<br/>
+			<section>
+				<section class="container-fluid">
+					<h3>
+						<strong>School</strong>
+					</h3>
+					<hr>
+				</div>
+				<br/>
+				<div class="d-sm-flex justify-content-between align-items-center">
+					<div>
+						<p>
+							<strong>Wild Code School</strong>
+							<br>
+							Strasbourg
+						</p>
+					</div>
+					<div>
+						<p>
+							Février 2022 - Juillet 2022
+						</p>
+					</div>
+				</div>
+				<br/>
+				<div>
+					<p>
+						Développement web orientée Symfony (Back-end) & Développement web mobile. Language appris : PHP, JS, SCSS, CSS HTML, AJAX.
+						<br>
+						<br>
+						Framework : Symfony
+					</p>
+				</section>
+			</section>
+			<br/>
+			<section>
+				<section class="container-fluid">
+					<div>
+						<h3>
+							<strong>Skills</strong>
+						</h3>
+						<hr>
+					</div>
+					<div class="d-sm-flex justify-content-between align-items-center"></div>
+					<br/>
+					<div>
+						<p>
+							Interaction Design, Wireframing, User Research, User Interface,
+																																																																																																																													Web developer, Web Designer, Web Intégrateur
+						</p>
+					</section>
+				</section>
+				<br/>
+				<section>
+					<section class="container-fluid">
+						<div>
+							<h3>
+								<strong>Tools</strong>
+							</h3>
+							<hr>
+						</div>
+						<div class="d-sm-flex justify-content-between align-items-center"></div>
+						<br/>
+						<div>
+							<p>
+								Figma, Photoshop, Illustrator
+							</p>
+						</section>
+					</section>
+					<br/>
+					<section>
+						<section class="container-fluid">
+							<div>
+								<h3>
+									<strong>Contact</strong>
+								</h3>
+								<hr>
+							</div>
+							<div class="d-sm-flex justify-content-between align-items-center"></div>
+							<br/>
+							<div>
+								<p>
+									<a href="tel:+33766199592" style="text-decoration: none">07 66 19 95 92</a>
+								</p>
+								<p>
+									<a href="mailto:harxiadev@gmail.com" style="text-decoration: none">harxiadev@gmail.com</a>
+								</p>
+							</section>
+						</section>
+					</section>
+				</section>
+			{% endblock %}
+			<br/>
+			{% block footer %}
+				<footer class="bg-dark mt-3 text-white p-5 text-center">
+					<h5>Looking for some one to join an awesome venture</h5>
+					<br/>
+					<h3>
+						<strong>
+							Let’s Connect
+						</strong>
+						<i class="bi bi-arrow-up-right"></i>
+					</h3>
+					<br/>
+					<div class="d-flex justify-content-center">
+						<a href="https://www.linkedin.com/in/jonathan-matulla-21b4a1240/" target="_blank" style="text-decoration:none">Linkedin</a>&nbsp;<i class="bi bi-arrow-up-right"></i>
+						&nbsp; &nbsp;
+						<a href="https://www.github.com/harxia" target="_blank" style="text-decoration:none">Github</a>&nbsp;<i class="bi bi-arrow-up-right"></i>
+					</div>
+				</footer>
+			{% endblock %}
+
+		{% endblock %}

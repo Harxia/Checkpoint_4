@@ -1,0 +1,14 @@
+$bg-color: #f5f5f5;
+$size: 1em;
+
+body {
+  background-color: $bg-color;
+}
+
+footer {
+    background-color: #777;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    color: $bg-color;
+}
