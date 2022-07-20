@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+
+{% block body %}
+	<h1>Register</h1>
+	{% block stylesheets %}
+		{{ parent() }}
+		{{ encore_entry_link_tags('login') }}
+	{% endblock %}
+
+	{% if app.user %}
+		<div class="mb-3">
+			You are logged in as
+			{{ app.user.userIdentifier }},
+			<a href="{{ path('app_logout') }}">Logout</a>
+		</div>
+	{% endif %}
+	<div class="login-page">
+		<div class="form">
+			<div class="login-form container-fluid">
+
+				{{ form_start(registrationForm) }}
+				{{ form_row(registrationForm.email, {
+			'attr': {
+				'placeholder': 'Email',
+				'class': 'form-control',
+				'type': 'email',
+				'required': 'required',
+				'autocomplete': 'email',
+				'autofocus': 'autofocus',
+				'pattern': '^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z]{2,4}$'
+			}, 'label': ' '
+		}) }}
+				{{ form_row(registrationForm.plainPassword, {
+			'attr': {
+				'placeholder': 'Mot de passe',
+				'class': 'form-control',
+				'required': 'required',
+				'type': 'password',
+				'autocomplete': 'new-password',
+				'pattern': '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$',
+				'minlength': '8',
+				'maxlength': '255',
+				'title': '8 caractères minimum, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial',
+			}, 'label': ' '
+        }) }}
+				{{ form_row(registrationForm.agreeTerms, {
+			'attr': {
+				'class': 'ms-1 mt-2',
+				'id': 'agreeTerms',
+				'required': 'required',
+				'type': 'checkbox',
+			}, 'label': ' Agree to terms and conditions'
+		}) }}
+
+				<br/>
+				<button type="submit" class="btn btn-outline-light">Valider</button>
+				<p class="message">Already registered?
+					<a href="{{ path('app_login') }}">Sign In</a>
+				</p>
+				{{ form_end(registrationForm) }}
+			</div>
+		</div>
+	</div>
+{% endblock %}
