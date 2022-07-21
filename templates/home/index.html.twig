@@ -10,14 +10,18 @@
 	{% endblock %}
 
 	{% block systems_logout %}
-		<section class="container-fluid">
-			<div class="navigation naviga">
-				<a class="button-logout" href="{{path('app_logout')}}">
-					<img class="img-logout" src="assets/img/resume.png">
-					<div class="logout">LOGOUT</div>
-				</a>
-			</div>
-		</section>
+		{% if app.user is defined and app.user is not empty %}
+			{% if is_granted('ROLE_USER') == true %}
+				<section class="container-fluid">
+					<div class="navigation naviga">
+						<a class="button-logout" href="{{path('app_logout')}}">
+							<img class="img-logout" src="assets/img/resume.png">
+							<div class="logout">LOGOUT</div>
+						</a>
+					</div>
+				</section>
+			{%  endif %}
+		{%  endif %}
 	{% endblock %}
 
 	{% block content %}
@@ -273,7 +277,7 @@
 					<div>
 						<p>
 							Interaction Design, Wireframing, User Research, User Interface,
-																																																																																																																																																																																					Web developer, Web Designer, Web Intégrateur
+																																																																																																																																																																																												Web developer, Web Designer, Web Intégrateur
 						</p>
 					</section>
 				</section>
