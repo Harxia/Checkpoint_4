@@ -1,11 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Contact{% endblock %}
+{% block title %}New Contact
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Contact</h1>
+	{% block stylesheets %}
+		{{ encore_entry_link_tags('crud') }}
+	{% endblock %}
+	<h1>Create new Contact</h1>
 
-    {{ include('contact/_form.html.twig') }}
+	{{ include('contact/_form.html.twig') }}
 
-    <a href="{{ path('app_contact_index') }}">back to list</a>
+	<a href="{{ path('app_contact_index') }}">back to list</a>
 {% endblock %}

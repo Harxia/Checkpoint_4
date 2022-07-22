@@ -1,11 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New School{% endblock %}
+{% block title %}New School
+{% endblock %}
 
 {% block body %}
-    <h1>Create new School</h1>
+	{% block stylesheets %}
+		{{ encore_entry_link_tags('crud') }}
+	{% endblock %}
+	<h1>Create new School</h1>
 
-    {{ include('school/_form.html.twig') }}
+	{{ include('school/_form.html.twig') }}
 
-    <a href="{{ path('app_school_index') }}">back to list</a>
+	<a href="{{ path('app_school_index') }}">back to list</a>
 {% endblock %}

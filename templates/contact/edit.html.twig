@@ -3,6 +3,9 @@
 {% block title %}Edit Contact{% endblock %}
 
 {% block body %}
+	{% block stylesheets %}
+		{{ encore_entry_link_tags('crud') }}
+	{% endblock %}
     <h1>Edit Contact</h1>
 
     {{ include('contact/_form.html.twig', {'button_label': 'Update'}) }}
