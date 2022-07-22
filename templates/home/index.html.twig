@@ -7,6 +7,7 @@
 	{% block stylesheets %}
 		{{ parent() }}
 		{{ encore_entry_link_tags('home') }}
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	{% endblock %}
 
 	{% block systems_logout %}
@@ -26,121 +27,162 @@
 
 	{% block content %}
 		<section class="container">
-			<section class="container-fluid mt-4">
-				<h1>Hi, I'm Jonathan Matulla.
-					<strong class="text-primary">Web Developer / Designer</strong>
-					based in Strasbourg, France
-				</h1>
-				<br/>
-				<button class="btn btn-dark p-3 rounded-5">My Resume &nbsp;
-					<i class="bi bi-arrow-up-right"></i>
-				</button>
-			</section>
+			<div data-aos="fade-down" data-aos-duration="1000">
+				<section class="container-fluid mt-4">
+					<h1>Hi, I'm Jonathan Matulla.
+						<strong class="text-primary">Web Developer / Designer</strong>
+						based in Strasbourg, France
+					</h1>
+					<br/>
+					<button class="btn btn-dark p-3 rounded-5">My Resume &nbsp;
+						<i class="bi bi-arrow-up-right"></i>
+					</button>
+				</section>
+			</div>
 			<br/>
-			<section class="container-fluid">
-				<div class="d-flex justify-content-between align-items-center p-5">
-					<div class="">
-						<h3 class="">Web Developer</h3>
-						<p class="">
-							O'Shopi
-						</p>
+			<div data-aos="fade-left" data-aos-duration="3000">
+				<section class="container-fluid">
+					<div class="d-flex justify-content-between align-items-center p-5">
+						<div class="">
+							<h3 class="">Web Developer</h3>
+							<p class="">
+								O'Shopi
+							</p>
+						</div>
+						<div class="">
+							<a href="assets/video/prochainement.gif">
+								<i class="bi bi-arrow-right"></i>
+							</a>
+						</div>
 					</div>
-					<div class="">
-						<i class="bi bi-arrow-right"></i>
+					<figure class="text-center">
+						<img src="assets/img/oshopi.jpg" class="" alt="O'Shopi" width="100%" heigh="auto">
+					</figure>
+					<div>
+						<h6>
+							<span class="badge bg-secondary">UI / UX</span>
+							<span class="badge bg-secondary">Figma</span>
+							<span class="badge bg-secondary">Symfony</span>
+							<span class="badge bg-secondary">JavaScript</span>
+						</h6>
 					</div>
-				</div>
-				<figure class="text-center">
-					<img src="assets/img/oshopi.jpg" class="" alt="O'Shopi" width="100%" heigh="auto">
-				</figure>
-				<div>
-					<h6>
-						<span class="badge bg-secondary">UI / UX</span>
-						<span class="badge bg-secondary">Figma</span>
-						<span class="badge bg-secondary">Symfony</span>
-						<span class="badge bg-secondary">JavaScript</span>
-					</h6>
-				</div>
-			</section>
+				</section>
+			</div>
 			<br/>
-			<section class="container-fluid">
-				<div class="d-flex justify-content-between align-items-center p-5">
-					<div class="">
-						<h3 class="">Ui Design Study</h3>
-						<p class="">
-							Leboncoin
-						</p>
+			<div data-aos="fade-right" data-aos-duration="3000">
+				<section class="container-fluid">
+					<div class="d-flex justify-content-between align-items-center p-5">
+						<div class="">
+							<h3 class="">Ui Design Study</h3>
+							<p class="">
+								Leboncoin
+							</p>
+						</div>
+						<div class="">
+							<a href="assets/img/leboncoin_projet.png">
+								<i class="bi bi-arrow-right"></i>
+							</a>
+						</div>
 					</div>
-					<div class="">
-						<a href="assets/img/leboncoin_projet.png"><i class="bi bi-arrow-right"></i></a>
+					<figure class="text-center">
+						<img src="assets/img/leboncoin.png" class="" alt="O'Shopi" width="100%" heigh="auto">
+					</figure>
+					<div>
+						<h6>
+							<span class="badge bg-secondary">UI / UX</span>
+							<span class="badge bg-secondary">Figma</span>
+						</h6>
 					</div>
-				</div>
-				<figure class="text-center">
-					<img src="assets/img/leboncoin.png" class="" alt="O'Shopi" width="100%" heigh="auto">
-				</figure>
-				<div>
-					<h6>
-						<span class="badge bg-secondary">UI / UX</span>
-						<span class="badge bg-secondary">Figma</span>
-					</h6>
-				</div>
-			</section>
+				</section>
+			</div>
 			<br/>
-			<section class="container-fluid">
-				<div class="d-flex justify-content-between align-items-center p-5">
-					<div class="">
-						<h3 class="">UX Case Study</h3>
-						<p class="">
-							App Artiste
-						</p>
+			<div data-aos="fade-left" data-aos-duration="3000">
+				<section class="container-fluid">
+					<div class="d-flex justify-content-between align-items-center p-5">
+						<div class="">
+							<h3 class="">Design Conception</h3>
+							<p class="">
+								Archiduchesse
+							</p>
+						</div>
+						<div class="">
+							<a href="assets/video/Archiduchesse.mp4">
+								<i class="bi bi-arrow-right"></i>
+							</a>
+						</div>
 					</div>
-					<div class="">
-						<a href="assets/video/App-Artiste.mp4"><i class="bi bi-arrow-right"></i></a>
+					<figure class="text-center">
+						<img src="assets/img/Archiduchesse.svg" class="" alt="O'Shopi" width="100%" heigh="auto">
+					</figure>
+					<div>
+						<h6>
+							<span class="badge bg-secondary">UI / UX</span>
+							<span class="badge bg-secondary">Figma</span>
+						</h6>
 					</div>
-				</div>
-				<figure class="text-center">
-					<img src="assets/img/app_artiste.png" class="" alt="O'Shopi" width="100%" heigh="auto">
-				</figure>
-				<div>
-					<h6>
-						<span class="badge bg-secondary">UI / UX</span>
-						<span class="badge bg-secondary">Figma</span>
-					</h6>
-				</div>
-			</section>
+				</section>
+			</div>
+			<br/>
+			<div data-aos="fade-right" data-aos-duration="3000">
+				<section class="container-fluid">
+					<div class="d-flex justify-content-between align-items-center p-5">
+						<div class="">
+							<h3 class="">UX Case Study</h3>
+							<p class="">
+								App Artiste
+							</p>
+						</div>
+						<div class="">
+							<a href="assets/video/App-Artiste.mp4">
+								<i class="bi bi-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+					<figure class="text-center">
+						<img src="assets/img/app_artiste.png" class="" alt="O'Shopi" width="100%" heigh="auto">
+					</figure>
+					<div>
+						<h6>
+							<span class="badge bg-secondary">UI / UX</span>
+							<span class="badge bg-secondary">Figma</span>
+						</h6>
+					</div>
+				</section>
+			</div>
 		</section>
 	{% endblock %}
 	<br/>
 	{% block about_us %}
 		<section class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<section class="container-fluid p-3">
-						<h3>Hi, I'm Jonathan Matulla.
-							<strong class="text-primary">Web Developer / Designer</strong>
-							based in Strasbourg, France
-						</h3>
-					</section>
-
-					<section class="container-fluid p-3">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit varius massa cursus laoreet suspendisse ac nisl in pulvinar. Auctor integer pellentesque nunc ut at penatibus et.
-						</p>
-					</section>
-					<section class="container-fluid p-3">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit varius massa cursus laoreet suspendisse ac nisl in pulvinar. Auctor integer pellentesque nunc ut at penatibus viverra risus nisl. Sapien nibh interdum tellus sapien et tortor, commodo. Dolor urna pharetra, nulla et morbi sed ornare. Sed condimentum urna pharetra id in enim nunc. Mi ut etiam vel.
-						</p>
-					</section>
-
-
-				</div>
-				<div class="col-md-6 fixed-posi bg-light">
-					<div class="h-100 d-flex align-items-center justify-content-center">
-						<section>
-							<figure class="text-center p-4">
-								<img src="assets/img/resume.png" class="img-fluid" alt="Photo de moi même">
-							</figure>
+			<div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+				<div class="row">
+					<div class="col-md-6">
+						<section class="container-fluid p-3">
+							<h3>Hi, I'm Jonathan Matulla.
+								<strong class="text-primary">Web Developer / Designer</strong>
+								based in Strasbourg, France
+							</h3>
 						</section>
+
+						<section class="container-fluid p-3">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit varius massa cursus laoreet suspendisse ac nisl in pulvinar. Auctor integer pellentesque nunc ut at penatibus et.
+							</p>
+						</section>
+						<section class="container-fluid p-3">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit varius massa cursus laoreet suspendisse ac nisl in pulvinar. Auctor integer pellentesque nunc ut at penatibus viverra risus nisl. Sapien nibh interdum tellus sapien et tortor, commodo. Dolor urna pharetra, nulla et morbi sed ornare. Sed condimentum urna pharetra id in enim nunc. Mi ut etiam vel.
+							</p>
+						</section>
+					</div>
+					<div class="col-md-6 fixed-posi bg-light">
+						<div class="h-100 d-flex align-items-center justify-content-center">
+							<section>
+								<figure class="text-center p-4">
+									<img src="assets/img/resume.png" class="img-fluid" alt="Photo de moi même">
+								</figure>
+							</section>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -148,130 +190,130 @@
 	{% endblock %}
 	<br/>
 	{% block resume %}
-		<section class="container">
-			<section class="container-fluid d-sm-flex justify-content-between align-items-center">
-				<h2 class="fs-1">{{resume.name}}</h2>
-				<br/>
-				<button class="btn btn-dark p-3 rounded-5">&nbsp;
-					<a class="text-white" href="assets/img/cv.pdf">PDF</a>
-					&nbsp;
-					<i class="bi bi-arrow-up-right"></i>
-					&nbsp;
-				</button>
-			</section>
-			<br/>
-			<br/>
-			<section>
-				<section class="container-fluid">
-					<h3>
-						<strong>Experience</strong>
-					</h3>
-					<hr>
-				</div>
-				<br/>
-				<div class="d-sm-flex justify-content-between align-items-center">
-					<div>
-						<p>
-							<strong>{{experience.name}}</strong>
-							<br>
-							{{experience.category}}
-						</p>
-					</div>
-					<div>
-						<p>
-							{{experience.debut}}
-							-
-							{{experience.fin}}
-						</p>
-					</div>
-				</div>
-				<br/>
-				<div>
-					<p>
-						{{experience.description}}
-					</p>
+		<div data-aos="fade-down-right">
+			<section class="container">
+				<section class="container-fluid d-sm-flex justify-content-between align-items-center">
+					<h2 class="fs-1">{{resume.name}}</h2>
+					<br/>
+					<button class="btn btn-dark p-3 rounded-5">&nbsp;
+						<a class="text-white" href="assets/img/cv.pdf">PDF</a>
+						&nbsp;
+						<i class="bi bi-arrow-up-right"></i>
+						&nbsp;
+					</button>
 				</section>
-			</section>
-			<br/>
-			<section>
-				<section class="container-fluid">
-					<h3>
-						<strong>Education</strong>
-					</h3>
-					<hr>
-				</div>
 				<br/>
-				<div class="d-sm-flex justify-content-between align-items-center">
-					<div>
-						<p>
-							<strong>{{education.name}}</strong>
-							<br>
-							{{education.category}}
-						</p>
-					</div>
-					<div>
-						<p>
-							{{education.debut}}
-							-
-							{{education.fin}}
-						</p>
-					</div>
-				</div>
 				<br/>
-				<div>
-					<p>
-						{{education.description}}
-					</p>
-				</section>
-			</section>
-			<br/>
-			<section>
-				<section class="container-fluid">
-					<h3>
-						<strong>School</strong>
-					</h3>
-					<hr>
-				</div>
-				<br/>
-				<div class="d-sm-flex justify-content-between align-items-center">
-					<div>
-						<p>
-							<strong>{{school.name}}</strong>
-							<br>
-							{{school.category}}
-						</p>
-					</div>
-					<div>
-						<p>
-							{{school.debut}}
-							-
-							{{school.fin}}
-						</p>
-					</div>
-				</div>
-				<br/>
-				<div>
-					<p>
-						{{school.description}}
-					</p>
-				</section>
-			</section>
-			<br/>
-			<section>
-				<section class="container-fluid">
-					<div>
+				<section>
+					<section class="container-fluid">
 						<h3>
-							<strong>Skills</strong>
+							<strong>Experience</strong>
 						</h3>
 						<hr>
-					</div>
-					<div class="d-sm-flex justify-content-between align-items-center"></div>
-					<br/>
-					<div>
-						<p>
-							Interaction Design, Wireframing, User Research, User Interface,
-																																																																																																																																																																																																			Web developer, Web Designer, Web Intégrateur
-						</p>
+						<br/>
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<div>
+								<p>
+									<strong>{{experience.name}}</strong>
+									<br>
+									{{experience.category}}
+								</p>
+							</div>
+							<div>
+								<p>
+									{{experience.debut}}
+									-
+									{{experience.fin}}
+								</p>
+							</div>
+						</div>
+						<br/>
+						<div>
+							<p>
+								{{experience.description}}
+							</p>
+						</div>
+					</section>
+				</section>
+				<br/>
+				<section>
+					<section class="container-fluid">
+						<h3>
+							<strong>Education</strong>
+						</h3>
+						<hr>
+						<br/>
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<div>
+								<p>
+									<strong>{{education.name}}</strong>
+									<br>
+									{{education.category}}
+								</p>
+							</div>
+							<div>
+								<p>
+									{{education.debut}}
+									-
+									{{education.fin}}
+								</p>
+							</div>
+						</div>
+						<br/>
+						<div>
+							<p>
+								{{education.description}}
+							</p>
+						</div>
+					</section>
+				</section>
+				<br/>
+				<section>
+					<section class="container-fluid">
+						<h3>
+							<strong>School</strong>
+						</h3>
+						<hr>
+						<br/>
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<div>
+								<p>
+									<strong>{{school.name}}</strong>
+									<br>
+									{{school.category}}
+								</p>
+							</div>
+							<div>
+								<p>
+									{{school.debut}}
+									-
+									{{school.fin}}
+								</p>
+							</div>
+						</div>
+						<br/>
+						<div>
+							<p>
+								{{school.description}}
+							</p>
+						</div>
+					</section>
+				</section>
+				<br/>
+				<section>
+					<section class="container-fluid">
+						<div>
+							<h3>
+								<strong>Skills</strong>
+							</h3>
+							<hr>
+						</div>
+						<br/>
+						<div>
+							<p>
+								Interaction Design, Wireframing, User Research, User Interface, Web developer, Web Designer, Web Intégrateur
+							</p>
+						</div>
 					</section>
 				</section>
 				<br/>
@@ -283,59 +325,63 @@
 							</h3>
 							<hr>
 						</div>
-						<div class="d-sm-flex justify-content-between align-items-center"></div>
 						<br/>
 						<div>
 							<p>
 								Figma, Photoshop, Illustrator
 							</p>
-						</section>
-					</section>
-					<br/>
-					<section>
-						<section class="container-fluid">
-							<div>
-								<h3>
-									<strong>Contact</strong>
-								</h3>
-								<hr>
-							</div>
-							<div class="d-sm-flex justify-content-between align-items-center"></div>
-							<br/>
-							<div>
-								<p>
-									<a href="tel:+33766199592" style="text-decoration: none">{{contact.tel}}</a>
-								</p>
-								<p>
-									<a href="mailto:harxiadev@gmail.com" style="text-decoration: none">{{contact.email}}</a>
-								</p>
-							</section>
-						</section>
+						</div>
 					</section>
 				</section>
-			{% endblock %}
-			<br/>
-			{% block footer %}
-				<footer class="bg-dark mt-3 text-white p-5 text-center">
-					<h5>Looking for some one to join an awesome venture</h5>
-					<br/>
-					<h3>
-						<strong>
-							Let’s Connect
-						</strong>
-						<i class="bi bi-arrow-up-right"></i>
-					</h3>
-					<br/>
-					<div class="d-flex justify-content-center">
-						<a href="https://www.linkedin.com/in/jonathan-matulla-21b4a1240/" target="_blank" style="text-decoration:none">Linkedin</a>&nbsp;<i class="bi bi-arrow-up-right"></i>
-						&nbsp; &nbsp;
-						<a href="https://www.github.com/harxia" target="_blank" style="text-decoration:none">Github</a>&nbsp;<i class="bi bi-arrow-up-right"></i>
-					</div>
-				</footer>
-			{% endblock %}
+				<br/>
+				<section>
+					<section class="container-fluid">
+						<div>
+							<h3>
+								<strong>Contact</strong>
+							</h3>
+							<hr>
+						</div>
 
-			{% block button_back_to_top %}
-				<script src="assets/js/back_to_top.js"></script>
-			{% endblock %}
-
-		{% endblock %}
+						<br/>
+						<div>
+							<p>
+								<a href="tel:+33766199592" style="text-decoration: none">{{contact.tel}}</a>
+							</p>
+							<p>
+								<a href="mailto:harxiadev@gmail.com" style="text-decoration: none">{{contact.email}}</a>
+							</p>
+						</div>
+					</section>
+				</section>
+			</section>
+		</div>
+	{% endblock %}<br/>
+	{% block footer %}
+		<div data-aos="fade-up">
+			<footer class="bg-dark mt-3 text-white p-5 text-center">
+				<h5>Looking for some one to join an awesome venture</h5>
+				<br/>
+				<h3>
+					<strong>
+						Let’s Connect
+					</strong>
+					<i class="bi bi-arrow-up-right"></i>
+				</h3>
+				<br/>
+				<div class="d-flex justify-content-center">
+					<a href="https://www.linkedin.com/in/jonathan-matulla-21b4a1240/" target="_blank" style="text-decoration:none">Linkedin</a>&nbsp;<i class="bi bi-arrow-up-right"></i>
+					&nbsp; &nbsp;
+					<a href="https://www.github.com/harxia" target="_blank" style="text-decoration:none">Github</a>&nbsp;<i class="bi bi-arrow-up-right"></i>
+				</div>
+			</footer>
+		</div>
+	{% endblock %}
+	{% block button_back_to_top %}
+		<script src="assets/js/back_to_top.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+	{% endblock %}
+{% endblock %}
