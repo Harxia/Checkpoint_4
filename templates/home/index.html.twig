@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Home
+{% block title %}PORTFOLIO - Jonathan Matulla
 {% endblock %}
 
 {% block body %}
+
 	{% block stylesheets %}
 		{{ parent() }}
 		{{ encore_entry_link_tags('home') }}
@@ -151,7 +152,9 @@
 			</div>
 		</section>
 	{% endblock %}
+
 	<br/>
+
 	{% block about_us %}
 		<section class="container">
 			<div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
@@ -163,7 +166,6 @@
 								based in Strasbourg, France
 							</h3>
 						</section>
-
 						<section class="container-fluid p-3">
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit varius massa cursus laoreet suspendisse ac nisl in pulvinar. Auctor integer pellentesque nunc ut at penatibus et.
@@ -188,7 +190,9 @@
 			</div>
 		</section>
 	{% endblock %}
+
 	<br/>
+
 	{% block resume %}
 		<div data-aos="fade-down-right">
 			<section class="container">
@@ -342,7 +346,6 @@
 							</h3>
 							<hr>
 						</div>
-
 						<br/>
 						<div>
 							<p>
@@ -356,7 +359,10 @@
 				</section>
 			</section>
 		</div>
-	{% endblock %}<br/>
+	{% endblock %}
+
+	<br/>
+
 	{% block footer %}
 		<div data-aos="fade-up">
 			<footer class="bg-dark mt-3 text-white p-5 text-center">
@@ -377,6 +383,7 @@
 			</footer>
 		</div>
 	{% endblock %}
+
 	{% block button_back_to_top %}
 		<script src="assets/js/back_to_top.js"></script>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -384,4 +391,5 @@
 			AOS.init();
 		</script>
 	{% endblock %}
+
 {% endblock %}
