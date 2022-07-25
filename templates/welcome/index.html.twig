@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Welcome
+{% endblock %}
+
+{% block body %}
+	{% block stylesheets %}
+		{{ parent() }}
+		{{ encore_entry_link_tags('welcome') }}
+	{% endblock %}
+	{% block content %}
+		<ul class="fly-in-text">
+			<li class="hiddeen">W</li>
+			<li class="hiddeen">E</li>
+			<li class="hiddeen">L</li>
+			<li class="hiddeen">C</li>
+			<li class="hiddeen">O</li>
+			<li class="hiddeen">M</li>
+			<li class="hiddeen">E</li>
+		</ul>
+		<br/>
+		<div class="text-center">
+			<a href={{path('app_loading')}} class="btn btn-lg btn-outline-light mt-3">
+				<i class="bi bi-vector-pen"></i>
+				&nbsp;
+				Visit my portfolio
+			</a>
+		</div>
+	{% endblock %}
+	{% block js %}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+                'use strict';
+                var texxt = $('ul li');
+                texxt.removeClass('hiddeen');
+            });
+		</script>
+	{% endblock %}
+{% endblock %}
