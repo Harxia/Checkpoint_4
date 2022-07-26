@@ -30,7 +30,7 @@
     width: $size;
     height: $size;
     z-index: 9;
-    background-image: url(https://rafaelavlucas.github.io/assets/codepen/logo_white.svg);
+    background-image: url(/public/assets/img/resume.png);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: 10px 7px;
@@ -52,6 +52,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-color: transparent;
+      transition: all 0.2s ease;
       display: flex;
       transition: all 0.2s ease, background-color 0.4s ease;
       opacity: 0;
@@ -60,23 +61,52 @@
 
     &.portfolio {
       transition: all 0.8s ease;
-
       .icon {
-        background-image: url(https://rafaelavlucas.github.io/assets/codepen/link.svg);
+        background-color: rgba(#000000, 0.2);
+        background-image: url(/public/assets/img/pen.png);
+        backdrop-filter: blur(5px);
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.2s ease, background-color 0.4s ease;
       }
     }
 
-    &.dribbble {
+    &.github {
       transition: all 0.3s ease;
       .icon {
-        background-image: url(https://rafaelavlucas.github.io/assets/codepen/dribbble.svg);
+        background-color: rgba(#000000, 0.2);
+        background-image: url(/public/assets/img/github.svg);
+        backdrop-filter: blur(5px);
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.2s ease, background-color 0.4s ease;
       }
     }
 
     &.linkedin {
       transition: all 0.8s ease;
       .icon {
-        background-image: url(https://rafaelavlucas.github.io/assets/codepen/linkedin.svg);
+        background-color: rgba(#000000, 0.2);
+        background-image: url(/public/assets/img/linkedin.png);
+        backdrop-filter: blur(5px);
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.2s ease, background-color 0.4s ease;
       }
     }
   }
@@ -87,7 +117,7 @@
     transition: all $transition;
 
     .logo {
-      opacity: 1;
+      opacity: 0;
       transition: all 0.6s ease;
     }
 
@@ -112,7 +142,7 @@
         transition: all 0.3s 0s $cubic;
         .icon {
           &:hover {
-            background-color: #698fb7;
+            background-color: paleturquoise;
           }
         }
       }
@@ -123,7 +153,7 @@
         transition: all 0.3s 0.15s $cubic;
         .icon {
           &:hover {
-            background-color: #ea4c89;
+            background-color: #d7d7d7;
           }
         }
       }
@@ -211,161 +241,11 @@ body {
   background: $bg-01;
 }
 
-.logo {
-  position: fixed;
-  z-index: 5;
-  bottom: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 100%;
-  backdrop-filter: blur(5px);
-
-  img {
-    width: 55%;
-    height: 55%;
-    transform: translateY(-1px);
-    opacity: 0.8;
-  }
-}
-
-nav {
-  .menu {
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    //background-color: red;
-    padding: 0 5%;
-    box-sizing: border-box;
-    z-index: 3;
-
-    .website_name {
-      color: $bg-01;
-      font-weight: 600;
-      font-size: 20px;
-      letter-spacing: 1px;
-      background: white;
-      padding: 4px 8px;
-      border-radius: 2px;
-      opacity: 0.5;
-      transition: all 0.4s ease;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .menu_links {
-      transition: all 0.4s ease;
-      opacity: 0.5;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      @include sm {
-        display: none;
-      }
-
-      .link {
-        color: white;
-        text-transform: uppercase;
-        font-weight: 500;
-        margin-right: 50px;
-        letter-spacing: 2px;
-        position: relative;
-        transition: all 0.3s 0.2s ease;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        &:before {
-          content: "";
-          position: absolute;
-          width: 0px;
-          height: 4px;
-          background: $g-01;
-          bottom: -10px;
-          border-radius: 4px;
-          transition: all 0.4s cubic-bezier(0.82, 0.02, 0.13, 1.26);
-          left: 100%;
-        }
-
-        &:hover {
-          opacity: 1;
-          color: $m-01;
-
-          &:before {
-            width: 40px;
-            left: 0;
-          }
-        }
-      }
-    }
-
-    .menu_icon {
-      width: 40px;
-      height: 40px;
-      position: relative;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-
-      @include sm {
-        display: flex;
-      }
-
-      .icon {
-        width: 24px;
-        height: 2px;
-        background: white;
-        position: absolute;
-
-        &:before,
-        &:after {
-          content: "";
-          width: 100%;
-          height: 100%;
-          background: inherit;
-          position: absolute;
-          transition: all 0.3s cubic-bezier(0.49, 0.04, 0, 1.55);
-        }
-
-        &:before {
-          transform: translateY(-8px);
-        }
-
-        &:after {
-          transform: translateY(8px);
-        }
-      }
-
-      &:hover {
-        .icon {
-          background: $m-02;
-
-          &:before {
-            transform: translateY(-10px);
-          }
-
-          &:after {
-            transform: translateY(10px);
-          }
-        }
-      }
-    }
-  }
+img {
+  width: 55%;
+  height: 55%;
+  transform: translateY(-1px);
+  opacity: 0.8;
 }
 
 .wrapper {
