@@ -8,7 +8,26 @@
 	{% block stylesheets %}
 		{{ parent() }}
 		{{ encore_entry_link_tags('home') }}
+		{{ encore_entry_link_tags('navbar') }}
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	{% endblock %}
+
+	{% block navbar %}
+		<input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+		<label for="menu-icon"></label>
+		<nav class="nav">
+			<ul class="pt-5">
+				<li>
+					<a href="#">Work</a>
+				</li>
+				<li>
+					<a href="#">Resume</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+		</nav>
 	{% endblock %}
 
 	{% block systems_logout %}
